@@ -1,5 +1,5 @@
 #! usr/bin/env python
-from vistas.mainwindow import *
+from mainwindow import *
 import time
 from random import randint, uniform,random
 import os
