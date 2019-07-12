@@ -10,7 +10,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 		self.showMaximized()
 		self.label.setText("")
 		self.label_2.setText("")
-		self.pushButton.setText("Presióname")
+		self.pushButton.setText("Iniciar")
 		self.pushButton.clicked.connect(self.actualizar2)
 		self.pushButton_2.clicked.connect(self.reiniciar)
 		self.lineEdit.setText("")
@@ -43,9 +43,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 		self.cletras=self.spinBox.text()
 
 
-	def gato(self):
-		self.label.setText("puto")
-
+	
 	def actualizar(self):
 		"""palabra=self.lineEdit.text()
 		self.label.setText(palabra)"""
@@ -101,7 +99,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
 		palabra=""
 		for x in range(0,int(self.nivel)):
-			palabra=palabra+self.generameEsta()
+			palabra=palabra+self.generarLetra()
 		
 		self.label.setText(palabra)
 		self.deuchland=palabra
@@ -119,7 +117,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 		palabra=""
 		self.my_qtimer.stop()
 	
-	def generameEsta(self):
+	def generarLetra(self):
 		M=randint(1,27)
 		if M ==1:
 			LETRA="Q"
